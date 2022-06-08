@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    </head>
+    <body>
+      <main>
+        <li class="nav-item"> 
+          <a class="nav-link"href="{% url 'items:items_form' %}">Посчитать</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link"href="{% url 'index' %}">К выбору задания</a>
+        </li>
+        {% for item in items %}
+    <tr class='success'>
+        <p>
+          Номер
+          {{ item.pick }}
+        </p>
+        <p>
+          Результат:
+          {{ item.result }}
+        </p>
+        {% endfor %}
+          </div>
+      </main>     
+    </body>
+  </html>

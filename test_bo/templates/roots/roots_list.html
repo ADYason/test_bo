@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    </head>
+    <body>
+      <main>
+        <li class="nav-item"> 
+          <a class="nav-link"href="{% url 'roots:roots_form' %}">Посчитать</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link"href="{% url 'index' %}">К выбору задания</a>
+        </li>
+        {% for root in roots %}
+    <tr class='success'>
+        <p>
+          A:
+          {{ root.a }}
+        </p>
+        <p>
+          B:
+          {{ root.b }}
+        </p>
+        <p>
+          C:
+          {{ root.c }}
+        </p>
+        <p>
+          Значение:
+          {{ root.roots }}
+        </p>
+        {% endfor %}
+          </div>
+      </main>     
+    </body>
+  </html>
